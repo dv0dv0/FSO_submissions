@@ -23,6 +23,8 @@ const App = () => {
   ]
    
   const [points, setPoints] = useState(Array(anecdotes.length).fill(0))
+  const maxPoints = Math.max(...points)
+  const maxSelected = points.indexOf(maxPoints)
 
   const [selected, setSelected] = useState(genRandIndex(anecdotes.length))
 
@@ -40,10 +42,14 @@ const App = () => {
 
   return (
     <div>
+      <h1>Anecdote of the day</h1>
       <p>{anecdotes[selected]}</p>
       <p>has {points[selected]} votes</p>
       <Button handleClick={handleVoteClick} text='vote' />
       <Button handleClick={handleNextClick} text='next anecdote' />
+      <h1>Anecdote with most votes</h1>
+      <p>{anecdotes[maxSelected]}</p>
+      <p>has {points[maxSelected]} votes</p>
     </div>
   )
 

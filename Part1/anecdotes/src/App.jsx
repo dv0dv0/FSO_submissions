@@ -8,7 +8,7 @@ const Button = ({ handleClick, text }) => (
 
 const genRandIndex = (max) => {
   return Math.floor(Math.random() * max);
-};
+}
 
 const App = () => {
   const anecdotes = [
@@ -22,16 +22,27 @@ const App = () => {
     'The only way to go fast, is to go well.'
   ]
    
+  const [points, setPoints] = useState(Array(anecdotes.length).fill(0))
+
   const [selected, setSelected] = useState(genRandIndex(anecdotes.length))
-  
+
   const handleNextClick = () => {
     const updatedSelected = genRandIndex(anecdotes.length)
     setSelected(updatedSelected)
   }
 
+  const handleVoteClick = () => {
+    const updatedPoints = [...points]
+    updatedPoints[selected] += 1
+    setPoints(updatedPoints)
+  }
+
+
   return (
     <div>
-      {anecdotes[selected]}
+      <p>{anecdotes[selected]}</p>
+      <p>has {points[selected]} votes</p>
+      <Button handleClick={handleVoteClick} text='vote' />
       <Button handleClick={handleNextClick} text='next anecdote' />
     </div>
   )

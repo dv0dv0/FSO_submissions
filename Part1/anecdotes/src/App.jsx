@@ -1,5 +1,15 @@
 import { useState } from 'react'
 
+const Button = ({ handleClick, text }) => (
+  <button onClick={handleClick}>
+    {text}
+  </button>
+)
+
+const genRandIndex = (max) => {
+  return Math.floor(Math.random() * max);
+};
+
 const App = () => {
   const anecdotes = [
     'If it hurts, do it more often.',
@@ -12,13 +22,20 @@ const App = () => {
     'The only way to go fast, is to go well.'
   ]
    
-  const [selected, setSelected] = useState(0)
+  const [selected, setSelected] = useState(genRandIndex(anecdotes.length))
+  
+  const handleNextClick = () => {
+    const updatedSelected = genRandIndex(anecdotes.length)
+    setSelected(updatedSelected)
+  }
 
   return (
     <div>
       {anecdotes[selected]}
+      <Button handleClick={handleNextClick} text='next anecdote' />
     </div>
   )
+
 }
 
 export default App

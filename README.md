@@ -1,6 +1,9 @@
 # FSO_submissions
 submissions for FSO course
 
+to init:
+npm create vite@latest <dirname> -- --template react
+
 to start:
 npm run dev
 
@@ -12,7 +15,7 @@ https://fullstackopen.com/en/part1/a_more_complex_state_debugging_react_apps
 
 
 
-finished exercise 1.7 - working, struggling w 1.8
+finished Part1, starting Part2
 
 
 

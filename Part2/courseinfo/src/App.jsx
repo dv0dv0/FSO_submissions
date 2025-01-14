@@ -22,7 +22,13 @@ const Content = ({ parts }) => {
   )
 }
 
-const Part = () => {}
+const Part = ({ part }) => {
+  return (
+    <div>
+      {part.name} {part.exercises}
+    </div>
+  )
+}
 
 const App = () => {
   const course = {

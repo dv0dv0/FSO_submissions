@@ -14,8 +14,7 @@ https://fullstackopen.com/en/part1/a_more_complex_state_debugging_react_apps
 
 
 
-
-finished Part1, starting Part2
+in the middle of putting thebasics into the App components
 
 
 

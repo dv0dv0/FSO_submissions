@@ -1,11 +1,9 @@
-import Note from './components/Note'
-
-
 const Course = ({ course }) => {
   return (
     <div>
       <Header name={course.name} />
       <Content parts={course.parts} />
+      <TotalCount parts={course.parts} />
     </div>
   )
 }
@@ -26,6 +24,16 @@ const Part = ({ part }) => {
   return (
     <div>
       {part.name} {part.exercises}
+    </div>
+  )
+}
+
+const TotalCount = ({ parts }) => {
+  const justExercises = parts.map(part => part.exercises)
+  const totalExercises = justExercises.reduce((sum, current) => sum + current, 0)
+  return (
+    <div>
+      <strong>total of {totalExercises} exercises</strong>
     </div>
   )
 }
@@ -52,9 +60,6 @@ const App = () => {
       }
     ]
   }
-
-
-
 
   return <Course course={course} />
 }

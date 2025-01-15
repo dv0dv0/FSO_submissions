@@ -14,13 +14,7 @@ https://fullstackopen.com/en/part1/a_more_complex_state_debugging_react_apps
 
 
 
-in the middle of putting thebasics into the App components
-
-
-
-
-
-
+finished assignments up to 2.5
 
 
 Web programmers oath

@@ -12,9 +12,8 @@ https://fullstackopen.com/en/part1/a_more_complex_state_debugging_react_apps
 
 
 
-
-
-finished assignments up to 2.5
+started notes app for the forms module
+https://fullstackopen.com/en/part2/forms
 
 
 Web programmers oath

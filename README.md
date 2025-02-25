@@ -15,7 +15,7 @@ Current State:
 ####################################################
 
 
-Just about to start 2.6
+just finished 2.6, onto 2.7
 
 https://fullstackopen.com/en/part2/forms
 

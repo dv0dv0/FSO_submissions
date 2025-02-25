@@ -5,10 +5,19 @@ const App = (props) => {
   const [persons, setPersons] = useState(props.names) 
   const [newName, setNewName] = useState('')
 
+  const dupeCheck = (name) => {
+    return persons.some(person => person.content === name);
+  }
+
   const handleNameChange = (event) => {
     console.log(event.target.value)
     setNewName(event.target.value)
+
+    if (event.target.value && dupeCheck(event.target.value)) {
+      window.alert(`${event.target.value} already exists in the phonebook!`);
+    }
   }
+
 
   const addName = (event) => {
     event.preventDefault()
@@ -18,12 +27,12 @@ const App = (props) => {
       content: newName,
       id: String(persons.length + 1)
     }
-
+    dupeCheck(newName)
     setPersons(persons.concat(nameObject))
     setNewName('')
   }
 
-
+  
 
   return (
     <div>
@@ -39,6 +48,7 @@ const App = (props) => {
           <button type="submit">add</button>
         </div>
       </form>
+      <div>debug: {newName}</div>
       <h2>Numbers</h2>
       <ul>
         {persons.map(name =>

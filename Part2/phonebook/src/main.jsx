@@ -4,11 +4,13 @@ import App from './App.jsx'
 const names = [
   {
     id: 1,
-    content: 'Arto Hellas'
+    name: 'Arto Hellas',
+    number: '294-599-1818'
   },
   {
     id: 2,
-    content: 'Ada Lovelace'
+    name: 'Ada Lovelace',
+    number: '200-494-9911'
   }
 ]
 

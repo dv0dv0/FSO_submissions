@@ -15,7 +15,7 @@ Current State:
 ####################################################
 
 
-just finished 2.6, onto 2.7
+just finished 2.8, and also added useRef for cursor focus back to the name field
 
 https://fullstackopen.com/en/part2/forms
 
